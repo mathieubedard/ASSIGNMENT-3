@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator 3</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>1st Number: </td>
+            <td> <input type="text" name="n1" value="" id="n1"> </td>
+        </tr>
+        <tr>
+            <td>2nd Number: </td>
+            <td> <input type="text" name="n2" value="" id="n2"> </td>
+        </tr>
+        <tr>
+            <td>Result: </td>
+            <td> <input type="text" name="res" value="" disabled id="res"> </td>
+        </tr>
+        <tr>
+            <tr></tr>
+            <td> <button type="button" name="add button" onclick="Calculate('add')"> Add </button> </td>
+            <td> <button type="button" name="sub button" onclick="Calculate('sub')"> Sub </button> </td>
+            <td> <button type="button" name="mul button" onclick="Calculate('mul')"> Mul </button> </td>
+            <td> <button type="button" name="div button" onclick="Calculate('div')"> Div </button> </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        
+        function Calculate(objectId)
+        {  
+            var n1 = document.getElementById('n1').value;
+            var n2 = document.getElementById('n2').value;
+            var res;
+            if (objectId == "add")
+            {
+                res = parseFloat(n1) + parseFloat(n2);
+            }
+            else if (objectId == "sub")
+            {
+                 res = parseFloat(n1) - parseFloat(n2);
+            }
+            else if (objectId == "mul")
+            {
+                 res = parseFloat(n1) * parseFloat(n2);
+            }
+            else if (objectId == "div")
+            {
+                 res = parseFloat(n1) / parseFloat(n2);
+            }
+            document.getElementById ('res').value = res;
+        }
+
+    </script>
+</body>
+</html>

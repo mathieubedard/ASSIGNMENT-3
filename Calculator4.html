@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator 4</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td> <p>Enter Expression: </p> </td>
+            <td> <input class="display-box" type="text" id="equation"> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td align="center"> <button type="button" value="Evaluate" onclick="calculate()"> Evaluate </button> </td>
+        </tr>
+    </table>
+
+    <script>
+        function calculate()
+        {
+            var equation = document.getElementById("equation").value;
+            document.getElementById("equation").value = eval(equation);
+        }
+    </script>
+</body>
+</html>
